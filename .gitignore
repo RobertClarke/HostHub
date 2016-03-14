@@ -1,0 +1,13 @@
+.DS_Store
+*.codekit
+/public/assets/styles
+/public/assets/scripts
+*.codekit-cache
+
+/app/vendor/
+/app/composer.lock
+
+/cache/*
+!/cache/.htaccess
+
+/app/config.php

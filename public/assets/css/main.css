@@ -1,0 +1,2088 @@
+@charset "UTF-8";
+/**
+ * Main SASS file to import all styles into one stylsheet.
+ */
+/* normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS and IE text size adjust after device orientation change,
+ *    without disabling user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * Improve readability of focused elements when they are also in an
+ * active/hover state.
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  box-sizing: content-box;
+  /* 2 */
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  min-height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: #F7F8F8;
+}
+
+::-moz-selection {
+  color: #fff;
+  background: #0078c9;
+}
+
+::selection {
+  color: #fff;
+  background: #0078c9;
+}
+
+.wrapper {
+  width: 100%;
+  padding: 0 15px;
+  max-width: 1030px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.wrapper::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+img {
+  border: 0;
+}
+
+p {
+  margin-bottom: 1em;
+}
+p:last-child {
+  margin-bottom: 0;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+.hilight {
+  background: rgba(255, 217, 0, 0.2);
+}
+
+label {
+  cursor: pointer;
+}
+
+body {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.7em;
+}
+
+section#header {
+  width: 100%;
+  height: 220px;
+  color: #fff;
+  background: #23303B url("../img/bg_header.jpg") no-repeat center 100%;
+  background-size: cover;
+}
+section#header .wrapper {
+  height: 70px;
+}
+section#header #logo {
+  display: inline-block;
+  position: relative;
+  top: 23px;
+}
+
+#logo {
+  width: 119px;
+  height: 23px;
+  display: block;
+  text-indent: 101%;
+  white-space: nowrap;
+  overflow: hidden;
+  background-image: url("../img/logo.png");
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-webkit-min-device-pixel-ratio: 1.3020833333333333), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
+  #logo {
+    background-image: url("../img/logo_2x.png");
+    background-size: 119px 23px;
+  }
+}
+
+section#sub-header {
+  width: 100%;
+  margin-top: -150px;
+}
+section#sub-header .wrapper {
+  min-height: 165px;
+  padding: 20px 15px 15px 15px;
+  background: #fff;
+  border-bottom: 1px solid #EAEBEB;
+}
+section#sub-header h1 {
+  font-weight: 400;
+}
+
+section#content {
+  padding: 15px 0;
+}
+section#content header#title {
+  margin-bottom: 15px;
+}
+section#content header#title h2 {
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 26px;
+}
+section#content header#title h2 b {
+  font-weight: 600;
+}
+section#content header#title p {
+  color: #949494;
+  font-size: 12px;
+}
+
+body.boxed {
+  width: 100%;
+  min-height: 100%;
+  display: table;
+  background: #23303B url("../img/bg_header.jpg") no-repeat center 100%;
+  background-size: cover;
+  -webkit-animation-duration: 0.75s;
+          animation-duration: 0.75s;
+}
+body.boxed section#content {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 15px;
+  display: table-cell;
+  vertical-align: middle;
+}
+body.boxed .wrapper {
+  max-width: 650px;
+  height: 100%;
+  padding: 0;
+  display: table;
+  background: #23303B;
+  border-radius: 10px;
+}
+body.boxed #side {
+  width: 280px;
+  padding: 20px;
+  display: table-cell;
+  color: #fff;
+}
+body.boxed #side h2 {
+  margin-bottom: 5px;
+  font-size: 20px;
+  font-weight: 400;
+}
+body.boxed #side h3 {
+  font-size: 16px;
+  font-weight: 300;
+  color: #BDC1C4;
+}
+body.boxed #side .container {
+  width: 100%;
+  height: 100%;
+  display: table;
+}
+body.boxed #side .top, body.boxed #side .bottom {
+  height: 0;
+  display: table-row;
+}
+body.boxed #side .middle {
+  height: auto;
+  display: table-row;
+}
+body.boxed #side .middle .text {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 15px 0;
+  position: relative;
+  top: 5px;
+}
+body.boxed #side .bottom p {
+  margin-bottom: 10px;
+  color: #656E76;
+  font-size: 12px;
+}
+body.boxed #side ul {
+  margin-top: 15px;
+  list-style: none;
+  font-size: 12px;
+}
+body.boxed #side ul li {
+  margin-bottom: 3px;
+  color: #BDC1C4;
+}
+body.boxed #side ul i {
+  width: 14px;
+  height: 14px;
+  margin-right: 6px;
+  display: inline-block;
+  position: relative;
+  top: 1px;
+  font-size: 14px;
+  color: #64C520;
+}
+body.boxed #main {
+  width: auto;
+  min-width: 320px;
+  min-height: 300px;
+  padding: 20px;
+  vertical-align: top;
+  overflow: auto;
+  background: #fff;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+body.boxed #main h1 {
+  font-size: 16px;
+  color: #23303B;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 23px;
+}
+body.boxed #main input[type=submit], body.boxed #main input[type=button], body.boxed #main button {
+  width: 130px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+input[type=text], input[type=password], input[type=email] {
+  width: 100%;
+  padding: 12px;
+  color: #23303B;
+  font: 13px 'Open Sans', Helvetica, Arial, sans-serif;
+  border-radius: 4px;
+  border: none;
+  border: 1px solid #D4D6D8;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  -webkit-transition-property: border-color;
+  transition-property: border-color;
+}
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus {
+  border-color: #91979D;
+}
+
+.input {
+  margin-bottom: 10px;
+  position: relative;
+}
+.input.with-icon i {
+  font-size: 16px;
+  position: absolute;
+  top: 14px;
+  left: 12px;
+}
+.input.with-icon i.status {
+  left: auto;
+  right: 12px;
+}
+.input.with-icon i.status.good:before {
+  color: #64C520;
+  font-family: 'HostList';
+  content: '\e86c';
+}
+.input.with-icon i.status.bad:before {
+  color: #ED524F;
+  font-family: 'HostList';
+  content: '\e5c9';
+}
+.input.with-icon input[type=text], .input.with-icon input[type=password], .input.with-icon input[type=email] {
+  text-indent: 24px;
+}
+
+form .extras {
+  padding: 5px 0 15px 0;
+  color: #91979D;
+  font-size: 12px;
+}
+form .extras a {
+  color: #91979D;
+  text-decoration: none;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+form .extras a:hover {
+  color: #23303B;
+  text-decoration: underline;
+}
+form .extras .check {
+  display: inline-block;
+}
+form .extras .check input[type=checkbox] {
+  margin-right: 3px;
+}
+form .extras .check.centered {
+  display: block;
+  text-align: center;
+}
+form .extras .right {
+  float: right;
+}
+form .submit {
+  text-align: center;
+}
+
+.button, button, input[type=button], input[type=submit] {
+  display: inline-block;
+  padding: 10px 15px;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  background: #0075FF;
+  background-image: -webkit-linear-gradient(top, #00ACFF 0%, #0075FF 100%);
+  background-image: linear-gradient(-180deg, #00ACFF 0%, #0075FF 100%);
+  border: none;
+  border-radius: 4px;
+}
+.button.blue, button.blue, input[type=button].blue, input[type=submit].blue {
+  background: #0075FF;
+  background-image: -webkit-linear-gradient(top, #00ACFF 0%, #0075FF 100%);
+  background-image: linear-gradient(-180deg, #00ACFF 0%, #0075FF 100%);
+}
+.button.green, button.green, input[type=button].green, input[type=submit].green {
+  background: #00BA00;
+  background-image: -webkit-linear-gradient(top, #59D600 0%, #00BA00 100%);
+  background-image: linear-gradient(-180deg, #59D600 0%, #00BA00 100%);
+}
+.button .loader, button .loader, input[type=button] .loader, input[type=submit] .loader {
+  display: none;
+}
+.button span, button span, input[type=button] span, input[type=submit] span {
+  display: inline-block;
+}
+.button.loading, button.loading, input[type=button].loading, input[type=submit].loading {
+  padding-top: 19px;
+  padding-bottom: 18px;
+}
+.button.loading .loader, button.loading .loader, input[type=button].loading .loader, input[type=submit].loading .loader {
+  position: relative;
+  top: -5px;
+  display: block;
+}
+.button.loading span, button.loading span, input[type=button].loading span, input[type=submit].loading span {
+  display: none;
+}
+.button .loader:before,
+.button .loader:after,
+.button .loader, button .loader:before,
+button .loader:after,
+button .loader, input[type=button] .loader:before,
+input[type=button] .loader:after,
+input[type=button] .loader, input[type=submit] .loader:before,
+input[type=submit] .loader:after,
+input[type=submit] .loader {
+  border-radius: 50%;
+  width: 2.5em;
+  height: 2.5em;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation: load7 1.8s infinite ease-in-out;
+  animation: load7 1.8s infinite ease-in-out;
+}
+.button .loader, button .loader, input[type=button] .loader, input[type=submit] .loader {
+  font-size: 2px;
+  margin: 0 auto;
+  position: relative;
+  text-indent: -9999em;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+.button .loader:before, button .loader:before, input[type=button] .loader:before, input[type=submit] .loader:before {
+  left: -3.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.button .loader:after, button .loader:after, input[type=button] .loader:after, input[type=submit] .loader:after {
+  left: 3.5em;
+}
+.button .loader:before,
+.button .loader:after, button .loader:before,
+button .loader:after, input[type=button] .loader:before,
+input[type=button] .loader:after, input[type=submit] .loader:before,
+input[type=submit] .loader:after {
+  content: '';
+  position: absolute;
+  top: 0;
+}
+@-webkit-keyframes load7 {
+  0%,
+		80%,
+		100% {
+    box-shadow: 0 2.5em 0 -1.3em #ffffff;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0 #ffffff;
+  }
+}
+@keyframes load7 {
+  0%,
+		80%,
+		100% {
+    box-shadow: 0 2.5em 0 -1.3em #ffffff;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0 #ffffff;
+  }
+}
+.message {
+  display: block;
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  color: #fff;
+  font-weight: 600;
+  background: #ED524F;
+  border-radius: 4px;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+.message.error {
+  background: #ED524F;
+}
+.message.success {
+  background: #64C520;
+}
+.message.info {
+  background: #0075FF;
+}
+.message ul {
+  padding-left: 16px;
+  list-style: circle;
+}
+.message a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+#offers-dedicated section#sub-header h1 span {
+  color: #00AE5F;
+}
+#offers-dedicated section#sub-header .list-offer {
+  width: 100%;
+  position: relative;
+  display: table;
+  margin-top: 10px;
+  padding-top: 13px;
+  border-top: 1px dashed #EAEBEB;
+}
+#offers-dedicated section#sub-header .list-offer p {
+  height: 100%;
+  margin-bottom: 0;
+  overflow: auto;
+  display: table-cell;
+  vertical-align: middle;
+}
+#offers-dedicated section#sub-header .list-offer .actions {
+  width: 145px;
+  height: 100%;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: right;
+}
+#offers-dedicated section#sub-header .list-offer .actions .button.submit {
+  display: inline-block;
+  padding: 8px 15px;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  /* Rectangle 34: */
+  background: #00AE5F;
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%);
+  background-image: linear-gradient(-180deg, rgba(255, 255, 255, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%);
+  border-radius: 4px;
+}
+#offers-dedicated section#sub-header .list-offer .actions a.close {
+  margin-left: 5px;
+  position: relative;
+  top: 2px;
+  color: #B2B2B2;
+  font-size: 16px;
+  text-decoration: none;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+#offers-dedicated section#sub-header .list-offer .actions a.close:hover {
+  color: #23303B;
+}
+
+.filters::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.selects {
+  display: block;
+}
+.selects::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.selectize-control {
+  float: left;
+  display: block;
+  margin-right: 1.4819788315%;
+  width: 23.8885158764%;
+  /*&::before {
+  	-moz-transition: opacity 0.2s;
+  	-webkit-transition: opacity 0.2s;
+  	transition: opacity 0.2s;
+  	content: ' ';
+  	z-index: 2;
+  	position: absolute;
+  	display: block;
+  	top: 12px;
+  	right: 34px;
+  	width: 16px;
+  	height: 16px;
+  	//background: url(images/spinner.gif);
+  	background: red;
+  	background-size: 16px 16px;
+  	opacity: 0;
+  }
+  &.loading::before {
+  	opacity: 0.4;
+  }*/
+}
+.selectize-control:last-child {
+  margin-right: 0;
+}
+.selectize-control:nth-child(8) {
+  margin-right: 0;
+}
+.selectize-control.filter-cpu .selectize-dropdown > div {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+.selectize-control.filter-cpu .selectize-dropdown .by {
+  font-size: 12px;
+  opacity: 0.8;
+  font-weight: bold;
+}
+.selectize-control.filter-cpu .selectize-dropdown .name {
+  margin-right: 5px;
+  font-size: 12px;
+}
+.selectize-control.filter-cpu .selectize-dropdown .title {
+  display: block;
+  /*display: inline-block;*/
+}
+.selectize-control.filter-cpu .selectize-dropdown .description {
+  font-size: 12px;
+  /*display: inline;
+  margin-left: 5px;*/
+  display: block;
+  color: #a0a0a0;
+  white-space: nowrap;
+  width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.selectize-control.filter-cpu .selectize-dropdown .meta {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+}
+.selectize-control.filter-cpu .selectize-dropdown .meta li {
+  margin: 0;
+  padding: 0;
+  display: inline;
+  margin-right: 10px;
+}
+.selectize-control.filter-cpu .selectize-dropdown .meta li span {
+  font-weight: bold;
+}
+
+.toggles {
+  display: block;
+}
+.toggles::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.toggles .toggle {
+  float: left;
+  display: block;
+  margin-right: 1.4819788315%;
+  width: 15.4316843071%;
+  margin-top: 10px;
+  padding: 10px 4px;
+  display: inline-block;
+  color: #7F7F7F;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+  background: #fff;
+  border: 2px solid #E5E5E5;
+  cursor: pointer;
+  border-radius: 4px;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+.toggles .toggle:last-child {
+  margin-right: 0;
+}
+.toggles .toggle.selected {
+  color: #00AE5F;
+  border-color: #00AE5F;
+}
+.toggles .toggle.more {
+  margin-right: 0;
+}
+.toggles .toggle.hidden {
+  display: none;
+}
+.toggles .toggle:nth-child(6n) {
+  margin-right: 0;
+}
+
+#posts article {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  display: table;
+  position: relative;
+  background: #fff;
+  border-radius: 5px;
+}
+#posts article a.favorite {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  color: #C9CBCE;
+  text-decoration: none;
+  font-size: 20px;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+#posts article a.favorite:hover, #posts article a.favorite.active {
+  color: #ed1c24;
+}
+#posts article .main {
+  width: 100%;
+  overflow: auto;
+  display: table-cell;
+  float: left;
+  padding-right: 15px;
+}
+#posts article .main header {
+  width: 100%;
+  display: table;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #E5E5E5;
+}
+#posts article .main header .title {
+  width: 100%;
+  overflow: auto;
+  float: left;
+  display: table-cell;
+}
+#posts article .main header .title h3 {
+  display: inline-block;
+  margin-bottom: 2px;
+  font-size: 15px;
+  font-weight: 700;
+  /*
+  max-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  */
+}
+#posts article .main header .title h3 a {
+  color: #23303B;
+  text-decoration: none;
+}
+#posts article .main header .title p {
+  margin-bottom: 0;
+  color: #7F7F7F;
+  font-size: 12px;
+}
+#posts article .main header .company-logo {
+  width: 160px;
+  padding-left: 15px;
+  display: table-cell;
+  overflow: hidden;
+  text-align: center;
+  vertical-align: middle;
+}
+#posts article .main header .company-logo img {
+  max-width: 160px;
+  vertical-align: middle;
+}
+#posts article .specs {
+  width: 100%;
+  display: table;
+}
+#posts article .specs ul {
+  display: block;
+  list-style: none;
+  display: table-cell;
+}
+#posts article .specs ul::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+#posts article .specs li {
+  float: left;
+  display: block;
+  margin-right: 1.4819788315%;
+  width: 32.3453474456%;
+  font-size: 12px;
+  font-weight: 600;
+  /*&:nth-child(3n) {
+  	@include omega();
+  }*/
+}
+#posts article .specs li:last-child {
+  margin-right: 0;
+}
+#posts article .specs li span {
+  width: 100px;
+  display: inline-block;
+  font-weight: 400;
+}
+#posts article .specs li span i {
+  margin-right: 5px;
+  position: relative;
+  top: 1px;
+  color: #CCCCCC;
+  font-size: 16px;
+}
+#posts article .specs li:nth-child(1), #posts article .specs li:nth-child(4) {
+  float: left;
+  display: block;
+  margin-right: 1.4819788315%;
+  width: 40.8021790149%;
+}
+#posts article .specs li:nth-child(1):last-child, #posts article .specs li:nth-child(4):last-child {
+  margin-right: 0;
+}
+#posts article .specs li:nth-child(1) span, #posts article .specs li:nth-child(4) span {
+  width: 60px;
+}
+#posts article .specs li:nth-child(2), #posts article .specs li:nth-child(5) {
+  float: left;
+  display: block;
+  margin-right: 1.4819788315%;
+  width: 32.3453474456%;
+}
+#posts article .specs li:nth-child(2):last-child, #posts article .specs li:nth-child(5):last-child {
+  margin-right: 0;
+}
+#posts article .specs li:nth-child(2) span, #posts article .specs li:nth-child(5) span {
+  width: 80px;
+}
+#posts article .specs li:nth-child(3), #posts article .specs li:nth-child(6) {
+  float: left;
+  display: block;
+  margin-right: 1.4819788315%;
+  width: 23.8885158764%;
+  margin-right: 0;
+}
+#posts article .specs li:nth-child(3):last-child, #posts article .specs li:nth-child(6):last-child {
+  margin-right: 0;
+}
+#posts article .specs li:nth-child(3) span, #posts article .specs li:nth-child(6) span {
+  width: 90px;
+}
+#posts article .specs .details {
+  display: table-cell;
+  vertical-align: middle;
+}
+#posts article .specs .details a {
+  width: 110px;
+  padding: 5px 10px;
+  display: inline-block;
+  color: #7F7F7F;
+  font-size: 11px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 1px solid #E5E5E5;
+  border-radius: 4px;
+}
+#posts article .pricing {
+  width: 180px;
+  height: 100%;
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 15px;
+  text-align: center;
+  border-left: 1px dashed #E5E5E5;
+}
+#posts article .pricing .price {
+  display: table;
+  margin: 0 auto 4px auto;
+}
+#posts article .pricing .price span {
+  display: table-cell;
+  position: relative;
+}
+#posts article .pricing .price .currency {
+  vertical-align: top;
+  top: -5px;
+  font-size: 20px;
+}
+#posts article .pricing .price .dollars {
+  padding: 0 2px 0 2px;
+  vertical-align: baseline;
+  font-size: 36px;
+  font-weight: 600;
+}
+#posts article .pricing .price .cents {
+  vertical-align: top;
+  top: -7px;
+  font-size: 14px;
+  font-weight: 600;
+}
+#posts article .pricing .price .term {
+  vertical-align: baseline;
+  font-size: 14px;
+}
+#posts article .pricing .sub {
+  margin-bottom: 8px;
+  color: #7F7F7F;
+  font-size: 12px;
+}
+#posts article .pricing a.claim {
+  display: block;
+  padding: 10px 6px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  /* Rectangle 34: */
+  background: #7FBB00;
+  background-image: -webkit-linear-gradient(top, #91CE00 0%, #40AD00 100%);
+  background-image: linear-gradient(-180deg, #91CE00 0%, #40AD00 100%);
+  border-radius: 4px;
+}
+#posts article.featured .main header .title h3 {
+  padding: 0px 4px;
+  background: rgba(255, 217, 0, 0.2);
+}
+#posts article.featured .pricing a.claim {
+  color: #23303B;
+  background-image: -webkit-linear-gradient(top, #FFE200 0%, #FFCE00 100%);
+  background-image: linear-gradient(-180deg, #FFE200 0%, #FFCE00 100%);
+}
+#posts article.featured .pricing a.claim:before {
+  margin-right: 5px;
+  font-family: 'HostList';
+  content: "\e838";
+}
+#posts article.featured .pricing a.claim:after {
+  margin-left: 5px;
+  font-family: 'HostList';
+  content: "\e838";
+}
+
+/**
+ * selectize.default.css (v0.12.1) - Default Theme
+ * Copyright (c) 2013–2015 Brian Reavis & contributors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this
+ * file except in compliance with the License. You may obtain a copy of the License at:
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
+ * ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ *
+ * @author Brian Reavis <brian@thirdroute.com>
+ */
+.selectize-control.plugin-drag_drop.multi > .selectize-input > div.ui-sortable-placeholder {
+  visibility: visible !important;
+  background: #f2f2f2 !important;
+  background: rgba(0, 0, 0, 0.06) !important;
+  border: 0 none !important;
+  box-shadow: inset 0 0 12px 4px #ffffff;
+}
+
+.selectize-control.plugin-drag_drop .ui-sortable-placeholder::after {
+  content: '!';
+  visibility: hidden;
+}
+
+.selectize-control.plugin-drag_drop .ui-sortable-helper {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.selectize-dropdown-header {
+  position: relative;
+  padding: 5px 8px;
+  border-bottom: 1px solid #d0d0d0;
+  background: #f8f8f8;
+  border-radius: 3px 3px 0 0;
+}
+
+.selectize-dropdown-header-close {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  color: #303030;
+  opacity: 0.4;
+  margin-top: -12px;
+  line-height: 20px;
+  font-size: 20px !important;
+}
+
+.selectize-dropdown-header-close:hover {
+  color: #000000;
+}
+
+.selectize-dropdown.plugin-optgroup_columns .optgroup {
+  border-right: 1px solid #f2f2f2;
+  border-top: 0 none;
+  float: left;
+  box-sizing: border-box;
+}
+
+.selectize-dropdown.plugin-optgroup_columns .optgroup:last-child {
+  border-right: 0 none;
+}
+
+.selectize-dropdown.plugin-optgroup_columns .optgroup:before {
+  display: none;
+}
+
+.selectize-dropdown.plugin-optgroup_columns .optgroup-header {
+  border-top: 0 none;
+}
+
+.selectize-control.plugin-remove_button [data-value] {
+  position: relative;
+  padding-right: 24px !important;
+}
+
+.selectize-control.plugin-remove_button [data-value] .remove {
+  z-index: 1;
+  /* fixes ie bug (see #392) */
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 17px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 12px;
+  color: inherit;
+  text-decoration: none;
+  vertical-align: middle;
+  display: inline-block;
+  padding: 2px 0 0 0;
+  border-left: 1px solid #0073bb;
+  border-radius: 0 2px 2px 0;
+  box-sizing: border-box;
+}
+
+.selectize-control.plugin-remove_button [data-value] .remove:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.selectize-control.plugin-remove_button [data-value].active .remove {
+  border-left-color: #00578d;
+}
+
+.selectize-control.plugin-remove_button .disabled [data-value] .remove:hover {
+  background: none;
+}
+
+.selectize-control.plugin-remove_button .disabled [data-value] .remove {
+  border-left-color: #aaaaaa;
+}
+
+.selectize-control {
+  position: relative;
+}
+
+.selectize-dropdown,
+.selectize-input,
+.selectize-input input {
+  color: #303030;
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 18px;
+  -webkit-font-smoothing: inherit;
+}
+
+.selectize-input,
+.selectize-control.single .selectize-input.input-active {
+  background: #ffffff;
+  cursor: text;
+  display: inline-block;
+}
+
+.selectize-input {
+  border: 1px solid #d0d0d0;
+  padding: 8px 8px;
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+}
+
+.selectize-control.multi .selectize-input.has-items {
+  padding: 5px 8px 2px;
+}
+
+.selectize-input.full {
+  background-color: #ffffff;
+}
+
+.selectize-input.disabled,
+.selectize-input.disabled * {
+  cursor: default !important;
+}
+
+.selectize-input.focus {
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+.selectize-input.dropdown-active {
+  border-radius: 3px 3px 0 0;
+}
+
+.selectize-input > * {
+  vertical-align: baseline;
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+
+.selectize-control.multi .selectize-input > div {
+  cursor: pointer;
+  margin: 0 3px 3px 0;
+  padding: 2px 6px;
+  background: #1da7ee;
+  color: #ffffff;
+  border: 1px solid #0073bb;
+}
+
+.selectize-control.multi .selectize-input > div.active {
+  background: #92c836;
+  color: #ffffff;
+  border: 1px solid #00578d;
+}
+
+.selectize-control.multi .selectize-input.disabled > div,
+.selectize-control.multi .selectize-input.disabled > div.active {
+  color: #ffffff;
+  background: #d2d2d2;
+  border: 1px solid #aaaaaa;
+}
+
+.selectize-input > input {
+  display: inline-block !important;
+  padding: 0 !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  max-width: 100% !important;
+  margin: 0 1px !important;
+  text-indent: 0 !important;
+  border: 0 none !important;
+  background: none !important;
+  line-height: inherit !important;
+  -webkit-user-select: auto !important;
+  box-shadow: none !important;
+}
+
+.selectize-input > input::-ms-clear {
+  display: none;
+}
+
+.selectize-input > input:focus {
+  outline: none !important;
+}
+
+.selectize-input::after {
+  content: ' ';
+  display: block;
+  clear: left;
+}
+
+.selectize-input.dropdown-active::before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  background: #f0f0f0;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.selectize-dropdown {
+  position: absolute;
+  z-index: 10;
+  border: 1px solid #d0d0d0;
+  background: #ffffff;
+  margin: -1px 0 0 0;
+  border-top: 0 none;
+  box-sizing: border-box;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 3px 3px;
+}
+
+.selectize-dropdown [data-selectable] {
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.selectize-dropdown [data-selectable] .highlight {
+  background: rgba(125, 168, 208, 0.2);
+  border-radius: 1px;
+}
+
+.selectize-dropdown [data-selectable],
+.selectize-dropdown .optgroup-header {
+  padding: 5px 8px;
+}
+
+.selectize-dropdown .optgroup:first-child .optgroup-header {
+  border-top: 0 none;
+}
+
+.selectize-dropdown .optgroup-header {
+  color: #303030;
+  background: #ffffff;
+  cursor: default;
+}
+
+.selectize-dropdown .active {
+  background-color: #f5fafd;
+  color: #495c68;
+}
+
+.selectize-dropdown .active.create {
+  color: #495c68;
+}
+
+.selectize-dropdown .create {
+  color: rgba(48, 48, 48, 0.5);
+}
+
+.selectize-dropdown-content {
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 200px;
+}
+
+.selectize-control.single .selectize-input,
+.selectize-control.single .selectize-input input {
+  cursor: pointer;
+}
+
+.selectize-control.single .selectize-input.input-active,
+.selectize-control.single .selectize-input.input-active input {
+  cursor: text;
+}
+
+.selectize-control.single .selectize-input:after {
+  content: ' ';
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  margin-top: -3px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 5px 0 5px;
+  border-color: #808080 transparent transparent transparent;
+}
+
+.selectize-control.single .selectize-input.dropdown-active:after {
+  margin-top: -4px;
+  border-width: 0 5px 5px 5px;
+  border-color: transparent transparent #808080 transparent;
+}
+
+.selectize-control.rtl.single .selectize-input:after {
+  left: 15px;
+  right: auto;
+}
+
+.selectize-control.rtl .selectize-input > input {
+  margin: 0 4px 0 -2px !important;
+}
+
+.selectize-control .selectize-input.disabled {
+  opacity: 0.5;
+  background-color: #fafafa;
+}
+
+.selectize-control.multi .selectize-input.has-items {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.selectize-control.multi .selectize-input.disabled [data-value] {
+  color: #999;
+  text-shadow: none;
+  background: none;
+  box-shadow: none;
+}
+
+.selectize-control.multi .selectize-input.disabled [data-value],
+.selectize-control.multi .selectize-input.disabled [data-value] .remove {
+  border-color: #e6e6e6;
+}
+
+.selectize-control.multi .selectize-input.disabled [data-value] .remove {
+  background: none;
+}
+
+.selectize-control.multi .selectize-input [data-value] {
+  text-shadow: 0 1px 0 rgba(0, 51, 83, 0.3);
+  border-radius: 3px;
+  background-color: #1b9dec;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#1da7ee), to(#178ee9));
+  background-image: -webkit-linear-gradient(top, #1da7ee, #178ee9);
+  background-image: linear-gradient(to bottom, #1da7ee, #178ee9);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff1da7ee', endColorstr='#ff178ee9', GradientType=0);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), inset 0 1px rgba(255, 255, 255, 0.03);
+}
+
+.selectize-control.multi .selectize-input [data-value].active {
+  background-color: #0085d4;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#008fd8), to(#0075cf));
+  background-image: -webkit-linear-gradient(top, #008fd8, #0075cf);
+  background-image: linear-gradient(to bottom, #008fd8, #0075cf);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff008fd8', endColorstr='#ff0075cf', GradientType=0);
+}
+
+.selectize-control.single .selectize-input {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  background-color: #f9f9f9;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fefefe), to(#f2f2f2));
+  background-image: -webkit-linear-gradient(top, #fefefe, #f2f2f2);
+  background-image: linear-gradient(to bottom, #fefefe, #f2f2f2);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffefefe', endColorstr='#fff2f2f2', GradientType=0);
+}
+
+.selectize-control.single .selectize-input,
+.selectize-dropdown.single {
+  border-color: #b8b8b8;
+}
+
+.selectize-dropdown .optgroup-header {
+  padding-top: 7px;
+  font-weight: bold;
+  font-size: 0.85em;
+}
+
+.selectize-dropdown .optgroup {
+  border-top: 1px solid #f0f0f0;
+}
+
+.selectize-dropdown .optgroup:first-child {
+  border-top: 0 none;
+}
+
+.animated {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.animated.infinite {
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.animated.hinge {
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+.animated.flipOutX,
+.animated.flipOutY,
+.animated.bounceIn,
+.animated.bounceOut {
+  -webkit-animation-duration: .75s;
+          animation-duration: .75s;
+}
+
+@-webkit-keyframes bounceIn {
+  from, 20%, 40%, 60%, 80%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+            transform: scale3d(0.3, 0.3, 0.3);
+  }
+  20% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+            transform: scale3d(1.1, 1.1, 1.1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9);
+            transform: scale3d(0.9, 0.9, 0.9);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03, 1.03, 1.03);
+            transform: scale3d(1.03, 1.03, 1.03);
+  }
+  80% {
+    -webkit-transform: scale3d(0.97, 0.97, 0.97);
+            transform: scale3d(0.97, 0.97, 0.97);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes bounceIn {
+  from, 20%, 40%, 60%, 80%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+            transform: scale3d(0.3, 0.3, 0.3);
+  }
+  20% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+            transform: scale3d(1.1, 1.1, 1.1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9);
+            transform: scale3d(0.9, 0.9, 0.9);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03, 1.03, 1.03);
+            transform: scale3d(1.03, 1.03, 1.03);
+  }
+  80% {
+    -webkit-transform: scale3d(0.97, 0.97, 0.97);
+            transform: scale3d(0.97, 0.97, 0.97);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+}
+.bounceIn {
+  -webkit-animation-name: bounceIn;
+          animation-name: bounceIn;
+}
+
+@-webkit-keyframes shake {
+  from, to {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+            transform: translate3d(-10px, 0, 0);
+  }
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translate3d(10px, 0, 0);
+            transform: translate3d(10px, 0, 0);
+  }
+}
+
+@keyframes shake {
+  from, to {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+            transform: translate3d(-10px, 0, 0);
+  }
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translate3d(10px, 0, 0);
+            transform: translate3d(10px, 0, 0);
+  }
+}
+.shake {
+  -webkit-animation-name: shake;
+          animation-name: shake;
+}
+
+/* This is the default Tooltipster theme (feel free to modify or duplicate and create multiple themes!): */
+.tooltipster-default {
+  border-radius: 5px;
+  border: 2px solid #000;
+  background: #4c4c4c;
+  color: #fff;
+}
+
+/* Use this next selector to style things like font-size and line-height: */
+.tooltipster-default .tooltipster-content {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  padding: 8px 10px;
+  overflow: hidden;
+}
+
+/* This next selector defines the color of the border on the outside of the arrow. This will automatically match the color and size of the border set on the main tooltip styles. Set display: none; if you would like a border around the tooltip but no border around the arrow */
+.tooltipster-default .tooltipster-arrow .tooltipster-arrow-border {
+  /* border-color: ... !important; */
+}
+
+/* If you're using the icon option, use this next selector to style them */
+.tooltipster-icon {
+  cursor: help;
+  margin-left: 4px;
+}
+
+/* This is the base styling required to make all Tooltipsters work */
+.tooltipster-base {
+  padding: 0;
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 9999999;
+  pointer-events: none;
+  width: auto;
+  overflow: visible;
+}
+
+.tooltipster-base .tooltipster-content {
+  overflow: hidden;
+}
+
+/* These next classes handle the styles for the little arrow attached to the tooltip. By default, the arrow will inherit the same colors and border as what is set on the main tooltip itself. */
+.tooltipster-arrow {
+  display: block;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.tooltipster-arrow span, .tooltipster-arrow-border {
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+.tooltipster-arrow-top span, .tooltipster-arrow-top-right span, .tooltipster-arrow-top-left span {
+  border-left: 8px solid transparent !important;
+  border-right: 8px solid transparent !important;
+  border-top: 8px solid;
+  bottom: -7px;
+}
+
+.tooltipster-arrow-top .tooltipster-arrow-border, .tooltipster-arrow-top-right .tooltipster-arrow-border, .tooltipster-arrow-top-left .tooltipster-arrow-border {
+  border-left: 9px solid transparent !important;
+  border-right: 9px solid transparent !important;
+  border-top: 9px solid;
+  bottom: -7px;
+}
+
+.tooltipster-arrow-bottom span, .tooltipster-arrow-bottom-right span, .tooltipster-arrow-bottom-left span {
+  border-left: 8px solid transparent !important;
+  border-right: 8px solid transparent !important;
+  border-bottom: 8px solid;
+  top: -7px;
+}
+
+.tooltipster-arrow-bottom .tooltipster-arrow-border, .tooltipster-arrow-bottom-right .tooltipster-arrow-border, .tooltipster-arrow-bottom-left .tooltipster-arrow-border {
+  border-left: 9px solid transparent !important;
+  border-right: 9px solid transparent !important;
+  border-bottom: 9px solid;
+  top: -7px;
+}
+
+.tooltipster-arrow-top span, .tooltipster-arrow-top .tooltipster-arrow-border, .tooltipster-arrow-bottom span, .tooltipster-arrow-bottom .tooltipster-arrow-border {
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.tooltipster-arrow-top-left span, .tooltipster-arrow-bottom-left span {
+  left: 6px;
+}
+
+.tooltipster-arrow-top-left .tooltipster-arrow-border, .tooltipster-arrow-bottom-left .tooltipster-arrow-border {
+  left: 5px;
+}
+
+.tooltipster-arrow-top-right span, .tooltipster-arrow-bottom-right span {
+  right: 6px;
+}
+
+.tooltipster-arrow-top-right .tooltipster-arrow-border, .tooltipster-arrow-bottom-right .tooltipster-arrow-border {
+  right: 5px;
+}
+
+.tooltipster-arrow-left span, .tooltipster-arrow-left .tooltipster-arrow-border {
+  border-top: 8px solid transparent !important;
+  border-bottom: 8px solid transparent !important;
+  border-left: 8px solid;
+  top: 50%;
+  margin-top: -7px;
+  right: -7px;
+}
+
+.tooltipster-arrow-left .tooltipster-arrow-border {
+  border-top: 9px solid transparent !important;
+  border-bottom: 9px solid transparent !important;
+  border-left: 9px solid;
+  margin-top: -8px;
+}
+
+.tooltipster-arrow-right span, .tooltipster-arrow-right .tooltipster-arrow-border {
+  border-top: 8px solid transparent !important;
+  border-bottom: 8px solid transparent !important;
+  border-right: 8px solid;
+  top: 50%;
+  margin-top: -7px;
+  left: -7px;
+}
+
+.tooltipster-arrow-right .tooltipster-arrow-border {
+  border-top: 9px solid transparent !important;
+  border-bottom: 9px solid transparent !important;
+  border-right: 9px solid;
+  margin-top: -8px;
+}
+
+/* Some CSS magic for the awesome animations - feel free to make your own custom animations and reference it in your Tooltipster settings! */
+.tooltipster-fade {
+  opacity: 0;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+}
+
+.tooltipster-fade-show {
+  opacity: 1;
+}
+
+.tooltipster-grow {
+  -webkit-transform: scale(0, 0);
+  transform: scale(0, 0);
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-backface-visibility: hidden;
+}
+
+.tooltipster-grow-show {
+  -webkit-transform: scale(1, 1);
+  transform: scale(1, 1);
+  -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.15);
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.15);
+}
+
+.tooltipster-swing {
+  opacity: 0;
+  -webkit-transform: rotateZ(4deg);
+  transform: rotateZ(4deg);
+  -webkit-transition-property: -webkit-transform, opacity;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+}
+
+.tooltipster-swing-show {
+  opacity: 1;
+  -webkit-transform: rotateZ(0deg);
+  transform: rotateZ(0deg);
+  -webkit-transition-timing-function: cubic-bezier(0.23, 0.635, 0.495, 1);
+  -webkit-transition-timing-function: cubic-bezier(0.23, 0.635, 0.495, 2.4);
+  transition-timing-function: cubic-bezier(0.23, 0.635, 0.495, 2.4);
+}
+
+.tooltipster-fall {
+  top: 0;
+  -webkit-transition-property: top;
+  transition-property: top;
+  -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.15);
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.15);
+}
+
+.tooltipster-fall.tooltipster-dying {
+  -webkit-transition-property: all;
+  transition-property: all;
+  top: 0px !important;
+  opacity: 0;
+}
+
+.tooltipster-slide {
+  left: -40px;
+  -webkit-transition-property: left;
+  transition-property: left;
+  -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.15);
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.15);
+}
+
+.tooltipster-slide.tooltipster-dying {
+  -webkit-transition-property: all;
+  transition-property: all;
+  left: 0px !important;
+  opacity: 0;
+}
+
+/* CSS transition for when contenting is changing in a tooltip that is still open. The only properties that will NOT transition are: width, height, top, and left */
+.tooltipster-content-changing {
+  opacity: 0.5;
+  -webkit-transform: scale(1.1, 1.1);
+  transform: scale(1.1, 1.1);
+}
+
+.tooltipster-custom {
+  border-radius: 5px;
+  background: #2a2a2a;
+  color: #fff;
+}
+
+.tooltipster-custom .tooltipster-content {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 13px;
+  padding: 8px 10px;
+}
